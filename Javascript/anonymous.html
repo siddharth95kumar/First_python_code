@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous</title>
+</head>
+<body>
+    <button id="btnshow">show</button>
+    <button id="btnhide">hide</button>
+    <p id="p1" style="display:none;" >hello anonymous</p>
+    <script>
+        var btn1=document.getElementById("btnshow")
+        var btn2=document.getElementById("btnhide")
+        var para=document.getElementById("p1")
+        btn1.addEventListener("click",function(){
+            para.style.display="block"
+        });//first button
+        
+        btn2.addEventListener("click",function()
+        {
+            para.style.display="none"
+        }
+        );//second button
+        
+    </script>
+</body>
+</html>

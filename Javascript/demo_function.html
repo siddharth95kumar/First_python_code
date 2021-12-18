@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <script>
+function calculation(operation)
+{
+    num1=parseInt(document.getElementById("txtnum1").value)
+    num2=parseInt(document.getElementById("txtnum2").value)
+    result=0
+if(operation=='add')
+{
+    result=num1+num2
+    
+}
+if(operation=='sub')
+   {
+       result=num1-num2
+    }
+if(operation=='multiply')
+    {
+        result=num1*num2
+    }
+
+
+    if(operation=='sqrt')
+    {
+        result=Math.sqrt(num1)
+    }
+    if(operation=='Power')
+    {
+        result=Math.pow(num1,num2)
+    }
+    if(operation=='divide')
+    {
+        result=num1/num2
+    }
+    document.getElementById("txtresult").value=result
+
+}
+    </script>
+</head>
+<body style="background-color: rgb(15, 62, 94);text-align: center;">
+   num1<input type="number" id="txtnum1" name="txtnum1"> <br>
+   num2<input type="number" id="txtnum2" name="txtnum2"> <br>
+   result<input type="result" id="txtresult" name="txtresult"> <br>
+   <button type="button" onclick="calculation('add')">Addition</button>
+   <button type="button" onclick="calculation('sub')">Subtraction</button>
+   <button type="button" onclick="calculation('divide')">Division</button>
+   <button type="button" onclick="calculation('multiply')">Multiple</button>
+   <button type="button" onclick="calculation('sqrt')">Squareroot</button>
+   <button type="button" onclick="calculation('Power')">Power</button>
+</body>
+</html>

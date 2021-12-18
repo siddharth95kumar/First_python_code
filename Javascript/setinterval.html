@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <img id="img1" src="../image/thor.jpg"  style="width: 200px;" height="200px">  
+  <h1 id="info">Hello javascript</h1>
+  <script>
+      var im=document.getElementById("img1")
+      var imageArray=["ca.jpg","bucky.jpg","bp.jpg"]
+       var index=0
+      function changeimage()
+      {
+          im.src="../images/"+imageArray[index]
+          index++
+          if(index>2)
+          index=0
+      }
+
+     setInterval(changeimage,2000) 
+     //setTimeout(changeimage,1000)
+      var im2=document.getElementById("info")
+      var colorarray=["#FF0000","blue","yellow","white","orange","coral","#006400"]//it can be uses colorname or colorcode
+      var i=0
+      function changecolor()
+      {
+          im2.style.color=colorarray[i]
+          i++
+          if(i>colorarray.length)//it can be use both color length or number(2,3,4)
+          i=0
+      }
+      setInterval(changecolor,500)
+      //setTimeout(changecolor,500)
+  </script>
+</body>
+</html>

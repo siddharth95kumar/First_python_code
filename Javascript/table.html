@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+        function showtable()
+        {
+            var num=parseInt(document.getElementById("txtnumber").value)
+            var tb_open="<table align=center border=3 style='color:red'size=10px>"
+                var tablerows=""
+                for(i=1;i<=10;i++)
+                {
+                    tablerows=tablerows+"<tr><td>"+num+"</td><td>*</td><td>"+i+"</td><td>=</td><td>"+(num*i)+"</td></tr>"
+                }
+                var tb_close="</table>"
+                document.getElementById("tablediv").innerHTML=tb_open+tablerows+tb_close
+                document.getElementById("tablediv").style.display="block"
+        }
+    </script>
+</head>
+<body>
+<input type="number" name="txtnumber" id="txtnumber" placeholder="Enter number" >
+<button onclick="showtable()">showtable</button>
+    <div id="tablediv" style="width: 100%; height: auto;background: rgb(112, 5, 5);display: none;">
+
+    </div>
+</body>
+</html>

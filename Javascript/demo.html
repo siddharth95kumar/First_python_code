@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <script>
+//alert("hello java script")
+
+
+function addtion(){
+   // alert("hhhhh")
+   t1=document.getElementById("txtnum1")
+   t2=document.getElementById("txtnum2")
+   num1=t1.value
+   num2=t2.value
+  // alert(num1+" "+num2)
+  sum=parseInt(num1)+parseInt(num2)
+  //alert(sum)
+  result=document.getElementById("txtresult")
+  result.value=sum
+}
+
+function Subtraction(){
+    num1=parseInt(document.getElementById("txtnum1").value)
+    num2=parseInt(document.getElementById("txtnum2").value)
+    document.getElementById("txtresult").value=num1-num2
+    
+}
+
+    </script>
+</head>
+<body style="background-color: crimson;">
+   num1<input type="number" id="txtnum1" name="txtnum1"> <br>
+   num2<input type="number" id="txtnum2" name="txtnum2"> <br>
+   result<input type="result" id="txtresult" name="txtresult"> <br>
+   <button type="button" onclick="addtion()">Addition</button>
+   <button type="button" onclick="Subtraction()">Subtraction</button>
+</body>
+</html>

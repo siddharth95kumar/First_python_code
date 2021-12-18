@@ -1,0 +1,25 @@
+body{
+    background-image: url("../images/nature.jpg");
+    background-color: rgb(90, 11, 79);
+    text-align: justify;
+    width: auto;
+    height: auto;
+}
+
+.global{
+
+    color: rgb(49, 77, 22);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    border-radius: 30px;
+} 
+
+input{
+    border-radius: 20px;
+    border-style:solid;
+    padding: 5px;
+    color: rgb(69, 207, 200);
+}
+textarea{
+    border-radius: 10px;
+}

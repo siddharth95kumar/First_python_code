@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK FORM</title>
+    <!-- <link rel="stylesheet" href="../css/feedback.css">  -->
+    <script src="./javascript/customvalidation.js"></script>
+    <script>
+        function onSubmit()
+        {
+            var status=true
+            email=document.getElementById("txtId").value
+            feedback=document.getElementById("txtFeedback").value
+            rating=document.getElementById("txtRating").value
+            if(checkEmpty(email)==false)
+            {
+                document.getElementById("smallEmail").innerText="User id required"
+                status=false
+            }
+            else
+            {
+                document.getElementById("smallEmail").innerText=""
+                status=false
+            }
+
+            if(checkEmpty(feedback)==false)
+            {
+                document.getElementById("smallFeedback").innerText="Text data required"
+                status=false
+            }
+            else
+            {
+                document.getElementById("smallFeedback").innerText=""
+                status=false
+                
+            }
+
+            if(checkcombo(rating)==false)
+            {
+                document.getElementById("smallRating").innerText=" Rating is required"
+                status=false
+            }
+            else
+            {
+                document.getElementById("smallRating").innerText=""
+                status=false
+            }
+            if (!status)
+                event.preventDefault();
+
+        }
+    </script>
+
+</head>
+<body>
+    <h1 style="text-align: center;color: rgb(39, 109, 173);">FEEDBACK FORM</h1>
+<form action="" >
+    <table border="2" class="global" align="center" style="width: 20%;">
+        <tr>
+            <td><label for="Email" width="100%">Enter email</label></td>
+            <td><input type="Email"  name="txtid" placeholder="Enter your email" id="txtId">
+                <small id="smallEmail"></small>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="Feedback">Enter feedback</label></td>
+            <td><textarea name="Feedback" id="txtFeedback"  cols="30" rows="10" ></textarea>
+                <small id="smallFeedback"></small>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="Date">Enter date</label></td>
+            <td><input type="Date" ></td>
+        </tr>
+        <tr>
+            <td><label for="Rating" >Enter rating</label>
+
+            
+                <select name="Rating" id="txtRating" >
+                    <option value="default">Select rating</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                
+                <small id="smallRating"></small>
+            </td>
+        </tr>
+        <tr>
+            <td><button type="submit" onclick="onSubmit();">submit</button></td> 
+        </tr>
+    </table>
+</form>
+</body>
+</html>

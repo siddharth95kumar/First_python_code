@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <title>LOGIN FORM</title>
+    <script>
+        function main()
+        {
+            var status=true
+            userid=document.getElementById("txtid").value
+            userpass=document.getElementById("txtpassword").value
+            if(userid.length==0)
+            {
+               document.getElementById("idmsg").innerText="userid required"
+                status= false
+            }
+
+            if(userpass.length==0)
+            {
+               document.getElementById("passmsg").innerText="password required"
+               //return false
+               status=false
+            }
+            return status
+        }
+    </script>
+    <style>
+        small{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;color: rgb(114, 46, 192);">LOGIN FORM</h1>
+    <form action="" onsubmit="return main()" >
+        <table border="" align="center" class="global" style="width: 20%;">
+
+            <tr>
+                <th><label for="Id">ID</label></th>
+                <th><input type="text" name="txtid" id="txtid" placeholder="Enter your id" ></th>
+                <th><small id="idmsg"></small></th>
+                
+            </tr>
+            <tr>
+                <th><label for="Password">Password</label></th>
+                <th><input type="Password" name="txtpassword" id="txtpassword" placeholder="Enter your password" ></th>
+                <th><small id="passmsg"></small></th>
+            </tr>
+            <tr>
+                <th>
+                    <button type="submit" >submit</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

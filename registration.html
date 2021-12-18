@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userregistration</title>
+</head>
+<body>
+    <h1 style="text-align: center;color: blueviolet;">REGISTRATION FORM</h1>
+        <form action="">
+            <table border="2">
+            <tr>
+                <th><label for="name">Enter name</label></th>
+                <th><input type="name" name="txtname" id="txtname" size="20" placeholder="Enter your name" required></th>
+            </tr>
+            <tr>
+                <th><label for="email">Enter email</label></th>
+                <th><input type="email" name="txtname" id="txtemaiil" size="20" placeholder="Enter your email" required></th>
+            </tr>
+            <tr>
+                <th><label for="Phone">Enter phone</label></th>
+                <th><input type="number" name="txtphone" id="txtphone" size="20" placeholder="Enter your phone" required></th>
+            </tr>
+            <tr>
+                <th><label for="address">Enter address</label></th>
+                <th><textarea id="txtaddress" cols="30" rows="10"></textarea></th>
+            </tr>
+
+            <tr>
+                
+                <th><label for="city" id="city">Select city:</label></th>
+                    <th>
+                        <select name="city" id="city">
+                            <option value="default">select city</option>
+                            <option value="lko">Lucknow</option>
+                            <option value="vns">Varanasi</option>
+                            <option value="gzp">Ghazipur</option>
+                        </select>
+                
+                </th>
+            </tr>
+
+            <tr>
+                <th><label for="male">male</label>
+                <input type="radio" name="gender" id="rdmale" value="male">
+                </th>
+                <th><label for="female">female</label>
+                    <input type="radio" name="gender" id="rdfemale" value="female"></th>
+            </tr>
+            <tr>
+                <th><label for="surfing">surfing</label>
+                <input type="checkbox" name="chkhobby" id="chkhobby" value="surf">
+                </th>
+                <th><label for="streaming">streaming</label>
+                    <input type="checkbox" name="chkstreaming" id="chkstreaming" value="streaming"></th>
+            </tr>
+
+            <tr>
+                <th><button type="submit">submit</button></th>
+                <th><button type="reset">reset</button></th>
+                
+            </tr>
+            <tr>
+                <th align="center"><input type="date"></th>
+            </tr>
+            </table>
+        </form>
+</body>
+</html>
